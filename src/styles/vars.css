@@ -28,6 +28,7 @@
     sans-serif;
 
   /* Font Weights */
+  --font-weight-lt: 300;
   --font-weight-reg: 400;
   --font-weight-sb: 600;
   --font-weight-bd: 700;

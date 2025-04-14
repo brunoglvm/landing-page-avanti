@@ -1,0 +1,56 @@
+.hero {
+  height: 31.875rem;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-gray-50);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__image-wrapper {
+  flex: 0 0 auto; /* evita que a imagem estique */
+}
+
+.hero__image {
+  width: 100%; /* você pode ajustar esse valor conforme o tamanho desejado */
+  height: auto;
+  object-fit: contain;
+}
+
+.hero__text {
+  flex: 1; /* ocupa o espaço restante */
+}
+
+.hero__title,
+.hero__subtitle {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bd);
+  text-transform: uppercase;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.hero__title-light {
+  font-weight: var(--font-weight-lt);
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+}
+
+.hero__highlight {
+  font-size: 1.5rem;
+  letter-spacing: normal;
+}

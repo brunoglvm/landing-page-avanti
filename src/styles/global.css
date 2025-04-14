@@ -1,0 +1,21 @@
+body {
+  font-family: var(--font-primary);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-size: 1.125rem;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary);
+  transition: box-shadow 0.2s;
+}

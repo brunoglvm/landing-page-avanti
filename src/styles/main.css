@@ -1,6 +1,6 @@
+/* Hero */
 .hero {
   height: 31.875rem;
-  padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   background-color: var(--color-gray-50);
@@ -11,20 +11,23 @@
   flex-direction: row;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .hero__image-wrapper {
-  flex: 0 0 auto; /* evita que a imagem estique */
+  flex: 1 1 40%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .hero__image {
-  width: 100%; /* você pode ajustar esse valor conforme o tamanho desejado */
-  height: auto;
   object-fit: contain;
+  display: block;
 }
 
 .hero__text {
-  flex: 1; /* ocupa o espaço restante */
+  flex: 1 1 40%;
+  padding: 1rem;
 }
 
 .hero__title,
@@ -35,8 +38,7 @@
 }
 
 .hero__title {
-  font-size: 2.5rem;
-  line-height: 1;
+  font-size: 6.25rem;
 }
 
 .hero__title-light {
@@ -44,13 +46,13 @@
 }
 
 .hero__subtitle {
-  font-size: 1rem;
-  letter-spacing: 0.3rem;
+  font-size: 1.5625rem;
+  letter-spacing: 0.4688rem;
   color: var(--color-primary);
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .hero__highlight {
-  font-size: 1.5rem;
+  font-size: 3.75rem;
   letter-spacing: normal;
 }

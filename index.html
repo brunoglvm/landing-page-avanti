@@ -80,15 +80,84 @@
         <!-- Nav -->
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="header__nav-item header__nav-item--highlight">
-              <!-- prettier-ignore -->
-              <svg class="header__menu-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="1" y1="6" x2="13" y2="6" stroke-width="2" stroke-linecap="round"/>
-              <line x1="1" y1="11" x2="13" y2="11" stroke-width="2" stroke-linecap="round"/>
-              <line x1="1" y1="1" x2="13" y2="1" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-              Todas as categorias
+            <li class="header__nav-item header__nav-item--highlight dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <!-- prettier-ignore -->
+                <svg class="header__menu-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="1" y1="6" x2="13" y2="6" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="1" y1="11" x2="13" y2="11" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="1" y1="1" x2="13" y2="1" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Todas as categorias
+              </a>
+              <!-- Menu dropdown de categorias e departamentos utilizando Bootstrap -->
+              <div class="dropdown-menu categories-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <!-- Departamentos -->
+                    <div class="col-4 departments-column">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link department-link active"
+                            href="#"
+                            data-department="dept1"
+                            >Departamento
+                            <!-- prettier-ignore -->
+                            <svg class="department-link__chevron" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z" fill="#303030"/>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link department-link"
+                            href="#"
+                            data-department="dept2"
+                            >Departamento
+                            <!-- prettier-ignore -->
+                            <svg class="department-link__chevron" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z" fill="#303030"/>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Categorias -->
+                    <div class="col-8 categories-column">
+                      <div class="department-categories dept1 active">
+                        <h6>Categoria</h6>
+                        <div class="row">
+                          <div class="col-6">
+                            <ul>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
             <li class="header__nav-item">Departamento</li>
             <li class="header__nav-item">Departamento</li>
             <li class="header__nav-item">Departamento</li>
@@ -116,10 +185,10 @@
           <h1 class="hero__title">
             Super<span class="hero__title-light">Sale</span>
           </h1>
-          <p class="hero__subtitle">
+          <h2 class="hero__subtitle">
             Itens selecionados com até
             <span class="hero__highlight">50%off</span>
-          </p>
+          </h2>
         </div>
       </div>
     </section>
@@ -129,5 +198,6 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/js/script.js" type="module"></script>
   </body>
 </html>

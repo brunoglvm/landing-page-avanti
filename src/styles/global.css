@@ -9,6 +9,18 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: 6.25rem;
+}
+
+h2 {
+  font-size: 3.75rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
 p {
   font-family: var(--font-secondary);
   font-size: 1.125rem;

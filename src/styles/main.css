@@ -53,6 +53,7 @@
 }
 
 .hero__highlight {
+  display: block;
   font-size: 3.75rem;
   letter-spacing: normal;
 }

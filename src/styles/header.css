@@ -71,6 +71,7 @@
   border: 1px solid var(--color-gray-200);
   border-radius: 0.625rem;
   outline: none;
+  transition: border-color 0.2s;
 
   &::placeholder {
     font-size: 0.875rem;
@@ -94,6 +95,7 @@
 
   & path {
     fill: var(--color-black);
+    transition: fill 0.2s;
   }
 }
 
@@ -119,10 +121,10 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  transition: color 0.2s;
 
   &:hover {
     color: var(--color-primary);
-    transition: color 0.2s;
   }
 }
 
@@ -176,18 +178,15 @@
   flex-wrap: wrap;
 }
 
-.header__nav-item {
-  font-family: var(--font-secondary);
-}
-
 .header__nav-item--highlight > a {
+  font-family: var(--font-secondary);
   font-weight: var(--font-weight-bd);
   color: var(--color-black);
+  transition: color 0.2s;
 }
 
 .header__nav-item--highlight > a:is(:hover, [aria-expanded="true"]) {
   color: var(--color-primary);
-  transition: color 0.2s;
 }
 
 .header__nav-item--highlight
@@ -195,7 +194,6 @@
   .header__menu-icon
   line {
   stroke: var(--color-primary);
-  transition: stroke 0.2s;
 }
 
 /* Nav Icons */
@@ -206,6 +204,7 @@
 
   & line {
     stroke: var(--color-black);
+    transition: stroke 0.2s;
   }
 }
 
@@ -213,7 +212,17 @@
   .header__menu-icon
   line {
   stroke: var(--color-primary);
-  transition: stroke 0.2s;
+}
+
+.header__nav-item a {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-reg);
+  color: var(--color-black);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 
 /* ===============================
@@ -250,7 +259,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.nav .department-link:hover {
+  color: var(--color-primary);
 }
 
 .nav .department-link.active {
@@ -274,12 +287,13 @@
 
   & path {
     fill: var(--color-gray-900);
+    transition: fill 0.2s;
   }
 }
 
 /* Categories */
 .categories-column {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .department-categories {
@@ -291,18 +305,20 @@
 }
 
 .department-categories h6 {
+  font-size: 0.875rem;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight-bd);
   color: var(--color-primary);
-  margin-top: 0;
-  margin-bottom: 0.75rem;
 }
 
 .department-categories a {
-  font-weight: var(--font-weight-lt);
+  font-size: 0.875rem;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-reg);
   color: var(--color-gray-700);
   display: block;
-  padding: 0.5rem 0;
+  margin: 1rem 0;
+  transition: color 0.2s;
 }
 
 .department-categories a:hover {
@@ -314,7 +330,7 @@
   display: flex;
   align-items: center;
   color: var(--color-white);
-  padding: 2rem;
+  padding: 1.25rem 1.5rem;
   height: 100%;
   background-color: var(--color-white);
 }
@@ -326,48 +342,72 @@
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 1;
+  padding: 2.6875rem 5.0625rem 6.125rem 1.6875rem;
+  z-index: 100;
 }
 
 .cta__title {
-  font-weight: var(--font-weight-bd);
-  margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  font-weight: var(--font-weight-reg);
+  color: var(--color-white);
+  line-height: 1.6875rem;
+  margin-bottom: 2.125rem;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+
+  & span {
+    display: block;
+  }
 }
 
-.cta__emphasis {
-  font-weight: var(--font-weight-lt);
+.cta__highlight {
+  font-weight: var(--font-weight-bd);
+}
+
+.cta__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14.75rem;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.75) -20.45%,
+    rgba(0, 0, 0, 0) 138.31%
+  );
+  z-index: 1;
+  border-radius: 0.5rem;
 }
 
 .cta__content img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 14.75rem;
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  border-radius: 8px;
-  opacity: 0.85;
+  border-radius: 0.5rem;
 }
 
 .cta__button {
   display: inline-block;
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  font-weight: var(--font-weight-bd);
+  font-size: 0.875rem;
   font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bd);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.625rem;
   position: relative;
   z-index: 10;
-  margin-top: auto;
+  transition: background-color 0.8s, color 0.4s;
 }
 
 .cta__button:hover {
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.9);
   color: var(--color-primary);
 }

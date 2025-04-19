@@ -1,4 +1,6 @@
-/* Hero */
+/* ===============================
+   HERO
+   =============================== */
 .hero {
   height: 31.875rem;
   display: flex;
@@ -8,26 +10,16 @@
 
 .hero__content {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.hero__image-wrapper {
-  flex: 1 1 40%;
-  height: 100%;
   overflow: hidden;
 }
 
-.hero__image {
-  object-fit: contain;
-  display: block;
+.hero__image-wrapper {
+  height: 100%;
 }
 
-.hero__text {
-  flex: 1 1 40%;
-  padding: 1rem;
+.hero__image {
+  object-fit: cover;
 }
 
 .hero__title,
@@ -49,7 +41,7 @@
   font-size: 1.5625rem;
   letter-spacing: 0.4688rem;
   color: var(--color-primary);
-  margin-top: 0.75rem;
+  text-align: center;
 }
 
 .hero__highlight {

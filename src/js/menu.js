@@ -10,18 +10,22 @@ departmentLinks.forEach((link) => {
 
     const department = this.getAttribute("data-department");
 
-    document.querySelectorAll(".department-categories").forEach((cat) => {
-      cat.classList.remove("active");
-    });
+    document
+      .querySelectorAll(".header__department-categories")
+      .forEach((cat) => {
+        cat.classList.remove("active");
+      });
 
     document
-      .querySelector(`.department-categories.${department}`)
+      .querySelector(
+        `.header__department-categories.header__department--${department}`
+      )
       .classList.add("active");
   });
 });
 
 document
-  .querySelector(".categories-dropdown")
+  .querySelector(".header__categories-dropdown")
   .addEventListener("click", function (e) {
     e.stopPropagation();
   });

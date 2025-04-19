@@ -1,6 +1,6 @@
-/* ===============================
-   Promo Bar
-   =============================== */
+/* =========================
+   PROMO BAR
+   ========================= */
 .promo-bar {
   display: flex;
   align-items: center;
@@ -27,9 +27,9 @@
   font-style: italic;
 }
 
-/* ===============================
-   Main
-   =============================== */
+/* =========================
+   HEADER MAIN
+   ========================= */
 .header {
   position: sticky;
   z-index: 1000;
@@ -164,9 +164,9 @@
   border: 1px solid var(--color-white);
 }
 
-/* ===============================
-   Navigation
-   =============================== */
+/* =========================
+   HEADER NAVIGATION
+   ========================= */
 .header__nav {
   margin-top: 1.375rem;
 }
@@ -191,13 +191,13 @@
 
 .header__nav-item--highlight
   > a:is(:hover, [aria-expanded="true"])
-  .header__menu-icon
+  .header__nav-menu-icon
   line {
   stroke: var(--color-primary);
 }
 
 /* Nav Icons */
-.header__menu-icon {
+.header__nav-menu-icon {
   width: 0.875rem;
   height: 0.875rem;
   margin-right: 0.5rem;
@@ -209,7 +209,7 @@
 }
 
 .header__nav-item--highlight:is(:hover, [aria-expanded="true"])
-  .header__menu-icon
+  .header__nav-menu-icon
   line {
   stroke: var(--color-primary);
 }
@@ -225,10 +225,9 @@
   }
 }
 
-/* ===============================
-   Dropdown
-   =============================== */
-
+/* =========================
+   DROPDOWN MENU
+   ========================= */
 .dropdown-menu {
   width: 78.75rem;
   height: 20.5625rem;
@@ -246,7 +245,7 @@
 }
 
 /* Departments */
-.departments-column {
+.header__departments-column {
   overflow-y: auto;
   background-color: var(--color-gray-25);
   height: 100%;
@@ -292,26 +291,26 @@
 }
 
 /* Categories */
-.categories-column {
+.header__categories-column {
   padding: 1.5rem;
 }
 
-.department-categories {
+.header__department-categories {
   display: none;
 }
 
-.department-categories.active {
+.header__department-categories.active {
   display: block;
 }
 
-.department-categories h6 {
+.header__department-categories h6 {
   font-size: 0.875rem;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight-bd);
   color: var(--color-primary);
 }
 
-.department-categories a {
+.header__department-categories a {
   font-size: 0.875rem;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight-reg);
@@ -321,12 +320,12 @@
   transition: color 0.2s;
 }
 
-.department-categories a:hover {
+.header__department-categories a:hover {
   color: var(--color-primary);
 }
 
 /* Call to Action */
-.cta {
+.header__cta {
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -410,4 +409,39 @@
 .cta__button:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: var(--color-primary);
+}
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+@media (max-width: 1260px) {
+  .header__nav-list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-bar {
+    height: 3.25rem;
+  }
+
+  .promo-bar__text {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .header__user-wrapper,
+  .header__nav-item,
+  .header__nav-categories-text {
+    display: none;
+  }
+
+  .header__nav-menu-icon {
+    width: 1.375rem;
+    height: 1.375rem;
+
+    & line {
+      stroke-width: 1;
+    }
+  }
 }

@@ -15,6 +15,7 @@
 }
 
 .hero__image-wrapper {
+  display: flex;
   height: 100%;
 }
 
@@ -27,6 +28,8 @@
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bd);
   text-transform: uppercase;
+  text-align: center;
+  line-height: normal;
 }
 
 .hero__title {
@@ -42,10 +45,92 @@
   letter-spacing: 0.4688rem;
   color: var(--color-primary);
   text-align: center;
+  margin-top: 0.75rem;
 }
 
 .hero__highlight {
   display: block;
   font-size: 3.75rem;
   letter-spacing: normal;
+  margin-top: 0.75rem;
+}
+
+/* ===============================
+   CAROUSEL
+   =============================== */
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+@media (max-width: 1260px) {
+  .hero {
+    height: 25.375rem;
+  }
+
+  .hero__content {
+    overflow: visible;
+  }
+
+  .hero__image-wrapper {
+    position: relative;
+    left: -6rem;
+  }
+
+  .hero__text {
+    position: relative;
+    left: -4rem;
+  }
+
+  .hero__title {
+    font-size: 3.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+  }
+
+  .hero__highlight {
+    font-size: 3.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 19.125rem;
+  }
+
+  .hero__image-wrapper {
+    left: -9rem;
+  }
+
+  .hero__text {
+    left: -6rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .hero__title-light {
+    display: block;
+  }
+
+  .hero__subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hero__highlight {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__image-wrapper {
+    left: -7rem;
+  }
+
+  .hero__text {
+    left: -9rem;
+  }
 }

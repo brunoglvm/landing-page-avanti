@@ -61,6 +61,18 @@
 
 .carousel {
   font-family: var(--font-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: red;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .carousel__title {
@@ -84,12 +96,12 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  position: relative;
   gap: 1.0625rem;
   padding: 6rem 19.75rem;
 }
 
 .carousel__col {
-  max-width: calc(100% / 5 - 1rem);
 }
 
 .product-card {
@@ -121,32 +133,45 @@
 
 .product-card__title {
   font-size: 0.875rem;
-  color: var(--color-gray-900);
-  margin: 16px 0 8px 0;
   line-height: normal;
+  color: var(--color-gray-900);
+  margin: 1rem 0 0.5rem 0;
 }
 
 .product-card__original-price {
+  font-size: 0.75rem;
+  line-height: normal;
   text-decoration: line-through;
   color: var(--color-gray-900);
 }
 
 .product-card__discounted-price {
+  font-size: 1rem;
   font-weight: var(--font-weight-bd);
+  line-height: normal;
   color: var(--color-black);
 }
 
 .product-card__discount {
-  color: var(--color-white);
   font-size: 0.6875rem;
+  font-weight: var(--font-weight-bd);
+  line-height: 0.75rem;
+  color: var(--color-white);
   background-color: var(--color-turquoise);
+  border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
 }
 
 .product-card__installments {
   font-size: 0.75rem;
+  line-height: normal;
+  margin-top: 0.25rem;
   color: var(--color-gray-900);
+
+  & .product-card__installments-highlight {
+    font-weight: var(--font-weight-bd);
+  }
 }
 
 .product-card__button {
@@ -191,6 +216,15 @@
   opacity: 1;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+}
+
+.carousel-control-next {
 }
 
 .carousel-control-prev:hover .carousel-arrow path,

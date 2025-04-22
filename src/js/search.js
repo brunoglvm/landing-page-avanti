@@ -1,5 +1,5 @@
-const searchInput = document.querySelector(".header__search-input");
-const searchButton = document.querySelector(".header__search-button");
+const searchInput = document.getElementById("headerSearchInput");
+const searchButton = document.getElementById("headerSearchButton");
 
 const handleSearch = () => {
   if (searchInput.value.trim() !== "") {

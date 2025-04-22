@@ -59,20 +59,19 @@
    CAROUSEL
    =============================== */
 
-.carousel {
-  font-family: var(--font-secondary);
-  position: relative;
-  overflow: hidden;
+/* Main Carousel Structure */
+.carousel-container {
+  max-width: 93.75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .carousel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  background-color: red;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 6rem 0 0;
+  padding: 0;
 }
 
 .carousel__title {
@@ -94,16 +93,65 @@
 
 .carousel__row {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  position: relative;
   gap: 1.0625rem;
-  padding: 6rem 19.75rem;
+  padding: 1.5625rem 0;
+  margin: 0;
 }
 
-.carousel__col {
+.carousel-item {
+  transition-duration: 0.8s;
 }
 
+/* Carousel Navigation Controls */
+.carousel-arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  & path {
+    fill: var(--color-primary);
+  }
+}
+
+.carousel-arrow--prev {
+  transform: rotate(180deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: -0.9rem;
+}
+
+.carousel-control-next {
+  right: -0.9rem;
+}
+
+.carousel-control-prev:hover .carousel-arrow path,
+.carousel-control-next:hover .carousel-arrow path {
+  fill: var(--color-white);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: var(--color-primary);
+}
+
+/* Product Cards */
 .product-card {
   background-color: var(--color-white);
   border-radius: 0.625rem;
@@ -138,6 +186,15 @@
   margin: 1rem 0 0.5rem 0;
 }
 
+.product-card__price {
+  display: flex;
+  align-items: center;
+}
+
+.product-card__price-details {
+  flex-direction: column;
+}
+
 .product-card__original-price {
   font-size: 0.75rem;
   line-height: normal;
@@ -155,12 +212,14 @@
 .product-card__discount {
   font-size: 0.6875rem;
   font-weight: var(--font-weight-bd);
-  line-height: 0.75rem;
+  line-height: normal;
   color: var(--color-white);
   background-color: var(--color-turquoise);
+  text-transform: uppercase;
+  text-align: center;
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
-  text-transform: uppercase;
+  margin-left: 0.5625rem;
 }
 
 .product-card__installments {
@@ -181,6 +240,7 @@
   color: var(--color-white);
   background-color: var(--color-primary);
   font-weight: var(--font-weight-bd);
+  text-align: center;
   width: 100%;
   border-radius: 0.5rem;
   line-height: 1.25rem;
@@ -190,51 +250,6 @@
   &:hover {
     background-color: #0049c7;
   }
-}
-
-.carousel-arrow {
-  width: 0.75rem;
-  height: 0.75rem;
-
-  & path {
-    fill: var(--color-primary);
-  }
-}
-
-.carousel-arrow--prev {
-  transform: rotate(180deg);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 1.875rem;
-  height: 1.875rem;
-  background-color: var(--color-white);
-  border-radius: 50%;
-  border: 1px solid var(--color-primary);
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  cursor: pointer;
-}
-
-.carousel-control-prev {
-}
-
-.carousel-control-next {
-}
-
-.carousel-control-prev:hover .carousel-arrow path,
-.carousel-control-next:hover .carousel-arrow path {
-  fill: var(--color-white);
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: var(--color-primary);
 }
 
 /* =========================

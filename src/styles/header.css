@@ -73,8 +73,6 @@
   transition: border-color 0.2s;
 
   &::placeholder {
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-sb);
     color: var(--color-black);
   }
 }

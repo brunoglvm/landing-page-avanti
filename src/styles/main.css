@@ -394,8 +394,111 @@
 
 .contact-section__text {
   font-size: 1.875rem;
+  line-height: 2.625rem;
   text-align: center;
   color: var(--color-white);
+}
+
+/* =========================
+     NEWSLETTER
+     ========================= */
+.newsletter {
+  margin-top: 4rem;
+  font-family: var(--font-secondary);
+}
+
+.newsletter__container {
+  max-width: 78.75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bd);
+  color: var(--color-black);
+  line-height: normal;
+  margin-bottom: 1.5rem;
+
+  & .newsletter__highlight {
+    color: var(--color-primary);
+  }
+}
+
+.newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-100);
+  padding: 4rem 7.125rem;
+  border-radius: 0.5rem;
+}
+
+.newsletter__input {
+  width: 15.5625rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-black);
+  border-radius: 0.5rem;
+  border: none;
+  line-height: normal;
+
+  &::placeholder {
+    color: var(--color-gray-900);
+  }
+}
+
+.newsletter__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.newsletter__checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  background-color: var(--color-white);
+  appearance: none;
+
+  &:checked {
+    background-color: var(--color-primary);
+    border-color: #0049c7;
+  }
+}
+
+.newsletter__label {
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+
+  & .newsletter__privacy-link {
+    color: var(--color-gray-700);
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.newsletter__button {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bd);
+  line-height: 1.25rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #0049c7;
+  }
 }
 
 /* =========================

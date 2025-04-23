@@ -60,7 +60,8 @@
    =============================== */
 
 /* Main Carousel Structure */
-.carousel-container {
+.carousel__container {
+  font-family: var(--font-secondary);
   max-width: 93.75rem;
   margin: 0 auto;
   padding: 0 1rem;
@@ -95,7 +96,7 @@
   display: flex;
   justify-content: center;
   gap: 1.0625rem;
-  padding: 1.5625rem 0;
+  padding-top: 1.5625rem;
   margin: 0;
 }
 
@@ -206,7 +207,6 @@
   font-size: 1rem;
   font-weight: var(--font-weight-bd);
   line-height: normal;
-  color: var(--color-black);
 }
 
 .product-card__discount {
@@ -250,6 +250,47 @@
   &:hover {
     background-color: #0049c7;
   }
+}
+
+/* ===============================
+   FEATURED PRODUCT
+   =============================== */
+.featured-product {
+  margin-top: 7.4375rem;
+}
+
+.featured-product__container {
+  max-width: 87.375rem;
+  margin: 0 auto;
+}
+
+.featured-product__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46.6875rem;
+  overflow: hidden;
+  background-color: var(--color-gray-400);
+}
+
+.featured-product__content {
+  margin-left: 2.3438rem;
+}
+
+.featured-product__title {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-bd);
+  line-height: 2.625rem;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.featured-product__text {
+  font-size: 1.125rem;
+  line-height: 1.575rem;
+  letter-spacing: 0.0563rem;
+  margin-bottom: 1.375rem;
 }
 
 /* =========================

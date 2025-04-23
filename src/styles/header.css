@@ -215,7 +215,6 @@
 
 .header__nav-item a {
   font-family: var(--font-secondary);
-  font-weight: var(--font-weight-reg);
   color: var(--color-black);
   transition: color 0.2s;
 
@@ -252,7 +251,6 @@
 }
 
 .nav .department-link {
-  font-weight: var(--font-weight-reg);
   color: var(--color-gray-900);
   display: flex;
   align-items: center;
@@ -312,7 +310,6 @@
 .header__department-categories a {
   font-size: 0.875rem;
   font-family: var(--font-secondary);
-  font-weight: var(--font-weight-reg);
   color: var(--color-gray-700);
   display: block;
   margin: 1rem 0;
@@ -346,7 +343,6 @@
 
 .cta__title {
   font-size: 1.5rem;
-  font-weight: var(--font-weight-reg);
   color: var(--color-white);
   line-height: 1.6875rem;
   margin-bottom: 2.125rem;

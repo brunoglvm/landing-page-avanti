@@ -1,8 +1,11 @@
 .footer {
-  background-color: var(--color-gray-25);
   color: var(--color-gray-900);
   font-family: var(--font-secondary);
   margin-top: 2.5rem;
+}
+
+.footer__main {
+  background-color: var(--color-gray-25);
   padding: 4rem 1rem;
 }
 
@@ -14,16 +17,12 @@
   gap: 2rem;
 }
 
-/* Logo and Social Media */
-
-.footer__logo {
-  margin-bottom: 2.5rem;
-}
-
+/* Social Media */
 .footer__social-list {
   display: flex;
   justify-content: flex-start;
   gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .footer__social-link img {
@@ -87,13 +86,36 @@
   height: auto;
 }
 
-/* Info */
-.footer__legal {
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--color-gray-900);
+/* Info  */
+.footer__legal-section {
+  background-color: var(--color-white);
+  padding: 2.5rem 0 3.9375rem 0;
 }
 
-.footer__certifications img {
-  height: auto;
+.footer__legal-text {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--color-gray-900);
+  text-align: center;
+  max-width: 67.125rem;
+  margin: 0 auto;
+}
+
+.footer__certifications {
+  display: flex;
+  margin-top: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__certifications-divider {
+  width: 0.0625rem;
+  height: 0.9375rem;
+  background-color: var(--color-gray-25);
+}
+
+.footer__certifications-item--avanti {
+  width: 3.625rem;
+  height: 3.625rem;
 }

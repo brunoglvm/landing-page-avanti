@@ -28,7 +28,7 @@
 }
 
 /* =========================
-   HEADER MAIN
+   MAIN
    ========================= */
 .header {
   position: sticky;
@@ -162,7 +162,7 @@
 }
 
 /* =========================
-   HEADER NAVIGATION
+   NAVIGATION
    ========================= */
 .header__nav {
   margin-top: 1.375rem;

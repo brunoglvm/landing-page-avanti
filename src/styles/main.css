@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 6rem 0 0;
+  margin-top: 6rem;
   padding: 0;
 }
 
@@ -290,7 +290,10 @@
   font-size: 1.125rem;
   line-height: 1.575rem;
   letter-spacing: 0.0563rem;
-  margin-bottom: 1.375rem;
+
+  &:first-of-type {
+    margin-bottom: 1.375rem;
+  }
 }
 
 /* ===============================
@@ -317,6 +320,7 @@
   font-weight: var(--font-weight-bd);
   color: var(--color-gray-800);
   line-height: 2.625rem;
+  letter-spacing: 0.075rem;
   text-transform: uppercase;
   margin-bottom: 3.125rem;
   text-align: center;
@@ -331,7 +335,10 @@
 .product-location__item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .product-location__icon-wrapper {
@@ -535,6 +542,18 @@
   .hero__highlight {
     font-size: 3.125rem;
   }
+
+  /* Carousel */
+  .carousel-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -566,6 +585,88 @@
 
   .hero__highlight {
     font-size: 2rem;
+  }
+
+  /* Carousel */
+  .carousel__header {
+    margin-top: 3.5rem;
+  }
+
+  .carousel__link {
+    text-decoration: underline;
+  }
+
+  /* Featured Product */
+  .featured-product {
+    margin-top: 3.5rem;
+  }
+
+  .featured-product__image-wrapper {
+    height: 21.8125rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .featured-product__image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .featured-product__content {
+    margin: 0 1.5rem;
+  }
+
+  .featured-product__title {
+    font-size: 1.25rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.06rem;
+    margin: 2.5rem 0 1.125rem 0;
+  }
+
+  .featured-product__text {
+    font-size: 0.875rem;
+    line-height: 1.225rem;
+    letter-spacing: 0.0437rem;
+  }
+
+  /* Product Location */
+  .product-location {
+    margin-top: 3rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .product-location__content {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .product-location__title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.05rem;
+    margin: 1.3125rem 0;
+  }
+
+  .product-location__item:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
+
+  .product-location__icon-wrapper {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 1rem;
+  }
+
+  .product-location__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .product-location__text {
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+    letter-spacing: 0.035rem;
   }
 }
 

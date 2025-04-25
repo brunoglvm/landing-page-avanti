@@ -132,6 +132,14 @@
   transform: translateY(-50%);
   z-index: 100;
   cursor: pointer;
+
+  &:hover .carousel-arrow path {
+    fill: var(--color-white);
+  }
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
 }
 
 .carousel-control-prev {
@@ -140,16 +148,6 @@
 
 .carousel-control-next {
   right: -0.9rem;
-}
-
-.carousel-control-prev:hover .carousel-arrow path,
-.carousel-control-next:hover .carousel-arrow path {
-  fill: var(--color-white);
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: var(--color-primary);
 }
 
 /* Product Cards */
@@ -571,6 +569,17 @@
   .carousel-control-next {
     width: 2.5rem;
     height: 2.5rem;
+    border: none;
+    box-shadow: none;
+    opacity: 0.6;
+
+    &:hover .carousel-arrow path {
+      fill: var(--color-primary);
+    }
+
+    &:hover {
+      background-color: var(--color-white);
+    }
   }
 }
 

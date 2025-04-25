@@ -92,8 +92,8 @@
 }
 
 /* =========================
-   INFO
-   ========================= */
+     INFO
+     ========================= */
 .footer__legal-section {
   background-color: var(--color-white);
   padding: 2.5rem 0;
@@ -125,4 +125,18 @@
 .footer__certifications-item--avanti {
   width: 3.625rem;
   height: 3.625rem;
+}
+
+/* =========================
+     MEDIA QUERIES
+     ========================= */
+@media (max-width: 768px) {
+  .footer__legal-section {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+
+  .footer__legal-text {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 }

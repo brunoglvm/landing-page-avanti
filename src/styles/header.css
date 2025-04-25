@@ -153,12 +153,11 @@
   align-items: center;
   font-size: 0.75rem;
   font-weight: var(--font-weight-bd);
-  transition: border 0.2s;
-  border: 1px solid transparent;
+  line-height: 0.875rem;
 }
 
 .header__cart-wrapper:hover .header__cart-count {
-  border: 1px solid var(--color-white);
+  outline: 2px solid var(--color-white);
 }
 
 /* =========================

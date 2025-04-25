@@ -627,6 +627,10 @@
     display: none;
   }
 
+  .carousel__row {
+    overflow-x: hidden;
+  }
+
   /* Featured Product */
   .featured-product {
     margin-top: 3.5rem;

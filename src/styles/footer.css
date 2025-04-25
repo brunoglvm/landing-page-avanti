@@ -170,4 +170,14 @@
     max-width: 100%;
     padding: 0 1rem;
   }
+
+  .footer__certifications {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__social-list {
+    flex-direction: column;
+  }
 }

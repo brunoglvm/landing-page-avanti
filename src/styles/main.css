@@ -385,18 +385,33 @@
 
 .contact-section__background {
   height: 41.25rem;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../assets/images/banner-office.webp");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px);
+    z-index: 1;
+  }
 }
 
 .contact-section__content {
   background-color: var(--color-primary);
   padding: 2.8125rem;
   width: 100%;
+  z-index: 10;
 }
 
 .contact-section__text {
@@ -466,6 +481,8 @@
 .newsletter__checkbox {
   width: 1rem;
   height: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
   border: 1px solid var(--color-gray-200);
   border-radius: 0.25rem;
   background-color: var(--color-white);
@@ -478,8 +495,9 @@
 }
 
 .newsletter__label {
-  font-size: 0.875rem;
-  color: var(--color-gray-800);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bd);
+  color: var(--color-gray-700);
 
   & .newsletter__privacy-link {
     color: var(--color-gray-700);
@@ -596,6 +614,10 @@
     text-decoration: underline;
   }
 
+  .carousel2--hidden-mobile {
+    display: none;
+  }
+
   /* Featured Product */
   .featured-product {
     margin-top: 3.5rem;
@@ -618,7 +640,7 @@
   }
 
   .featured-product__title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 2.1rem;
     letter-spacing: 0.06rem;
     margin: 2.5rem 0 1.125rem 0;
@@ -667,6 +689,55 @@
     font-size: 0.75rem;
     line-height: 1.05rem;
     letter-spacing: 0.035rem;
+  }
+
+  /* Contact */
+  .contact-section {
+    margin-top: 3rem;
+  }
+
+  .contact-section__background {
+    background-image: url("../assets/images/banner-office-mobile.webp");
+
+    &::before {
+      filter: blur(1px);
+    }
+  }
+
+  .contact-section__content {
+    padding: 1.125rem;
+  }
+
+  .contact-section__text {
+    font-size: 1rem;
+    font-weight: var(--font-weight-sb);
+    line-height: 1.4rem;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    margin-top: 3.5rem;
+    padding: 0 1rem;
+  }
+
+  .newsletter__title {
+    font-size: 1rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter__form {
+    gap: 1rem;
+    background-color: var(--color-gray-25);
+    padding: 2.375rem 1rem;
+  }
+
+  .newsletter__input {
+    width: 100%;
+  }
+
+  .newsletter__button {
+    width: 100%;
   }
 }
 

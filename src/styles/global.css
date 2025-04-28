@@ -1,12 +1,16 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-primary);
   color: var(--color-black);
   background-color: var(--color-white);
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 h1 {
